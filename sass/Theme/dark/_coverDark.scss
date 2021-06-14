@@ -1,0 +1,14 @@
+.darkMode {
+  .cover {
+    .cover__content {
+      .cover__form {
+        @include styleFormSearch(
+          $color-dark-0,
+          $color-dark-6,
+          $color-dark-2,
+          $color-dark-5
+        );
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.intro {
+  background: linear-gradient(-45deg, $color-red-0, $color-purple);
+  padding: 20px;
+  .intro__content {
+    width: 78%;
+    margin: 0 auto;
+    .intro__item {
+      display: flex;
+      align-items: center;
+    }
+    .intro__icon {
+      font-size: $fs-5;
+      color: $color-white-0;
+      margin-right: $mg-1;
+    }
+    .intro__detail {
+      p {
+        margin-bottom: 0;
+        &:first-child {
+          @include styleText($color-white-0, $fs-3 - 1, $fw-2);
+        }
+        &:last-child {
+          @include styleText($color-white-0, $fs-0, $fw-0);
+        }
+      }
+    }
+  }
+  @include responsive("extra-large") {
+    .intro__content {
+         .intro__icon {
+             display: none;
+         }
+    }
+  }
+  @include responsive("medium"){
+      display: none;
+  }
+}

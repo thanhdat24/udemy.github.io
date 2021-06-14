@@ -1,0 +1,67 @@
+.card {
+  height: 275px;
+  margin-right: 1px; // viền của thẻ cha bên ngoài vô tình che mất của thẻ con, do lỗi thư viện owl
+  cursor: pointer;
+  .card-body {
+    padding: 1rem;
+
+    .card-title {
+      @include styleText($color-black-0, $fs-0, $fw-1);
+    }
+    .card-text {
+      @include styleText($color-gray-0, $fs-1 - 1, $fw-0);
+      margin: $mg-0 0;
+    }
+    .card__stars {
+      i {
+        @include styleText($color-yellow-0, $fs-1 - 1, $fw-3);
+      }
+      .card__average {
+        @include styleText($color-gray-0, $fs-1, $fw-1);
+      }
+      .card__rate {
+        @include styleText($color-gray-0, $fs-1, $fw-0);
+      }
+    }
+    .card__price {
+      text-align: right;
+      padding: $pd-3 0;
+      span {
+        &:first-child {
+          @include styleText($color-gray-0, $fs-1, $fw-0);
+          text-decoration: line-through;
+        }
+        &:last-child {
+          @include styleText($color-black-0, $fs-0, $fw-1);
+        }
+      }
+    }
+    &:hover{
+      box-shadow: 0 0 3px 2px $color-black-1, 0 3px 2px 0 $color-black-1;
+        color: $color-blue-2;
+    }
+  }
+}
+
+.card--feedback {
+  height: 280px;
+  .card-body {
+    padding: 2rem;
+    .card-top {
+      display: flex;
+      .card-avatar {
+          margin-right: $mg-3;
+          margin-bottom: $mg-3;
+        img {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .card-text{
+        @include styleText($color-black-0,$fs-0,$fw-0);
+        line-height: $line-height;
+    }
+  }
+}

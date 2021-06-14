@@ -1,0 +1,38 @@
+.partners {
+  background-color: #f7f8fa;
+  padding: $pd-3 0;
+  .partners__content {
+    width: 70%;
+    margin: auto;
+    .partners__text {
+      text-align: center;
+    }
+    .partners__logo {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  @include responsive("extra-large") {
+    .partners__content {
+      width: 80%;
+    }
+  }
+  @include responsive("large") {
+    .partners__content {
+      width: 90%;
+    }
+  }
+  @include responsive("medium") {
+    .partners__content {
+        width: 60%;
+      .partners__logo {
+        flex-wrap: wrap;
+        .partners__items {
+          width: 50%;
+          text-align: center;
+          margin-bottom: $mg-4;
+        }
+      }
+    }
+  }
+}

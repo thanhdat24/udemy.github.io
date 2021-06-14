@@ -1,0 +1,49 @@
+// .owl-prev,
+// .owl-next {
+//   color: $color-blue-0;
+//   background-color: $color-white-0;
+//   width: 44px;
+//   height: 44px;
+//   border-radius: 50%;
+//   box-shadow: 0 2px 8px 2px $color-black-1;
+//   font-size: $fs-5;
+// }
+
+// Nên gọi theo code của thư viện để độ ưu tiên cao nhất có thể, để dè các code của thư viện
+.owl-carousel {
+  .owl-nav {
+    button {
+      &.owl-prev,
+      &.owl-next {
+        color: $color-blue-0;
+        background-color: $color-white-0;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px 2px $color-black-1;
+        font-size: $fs-2;
+        position: absolute;
+        top: 34%;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        &:hover {
+          color: $color-blue-2;
+          border-color: $color-blue-3;
+          background-color: $color-white-0;
+        }
+        &:focus { 
+          // xóa viền focus button
+          outline: none;
+        }
+      }
+      &.owl-prev {
+        left: -30px;
+      }
+      &.owl-next {
+        right: -30px;
+      }
+    }
+  }
+}

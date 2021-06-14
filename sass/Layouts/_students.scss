@@ -1,0 +1,10 @@
+.students{
+    padding: $pd-4 0;
+    .students__content{
+        width: 90%;
+        margin: auto;
+        h2{
+             @include styleText($color-black-0, $fs-5, $fw-2);
+        }
+    }
+}

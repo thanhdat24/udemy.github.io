@@ -1,0 +1,20 @@
+.bannner {
+  // background: color url position/bg-size bg-repeat
+  background: url(../img/udemy-logo-semi-transparent.svg) 0/30% no-repeat,
+    linear-gradient(61deg, $color-purple, $color-blue-4 41%);
+  background-blend-mode: overlay; // trung hòa trộn lẫn giữa 2 background để mờ lại, kiểu trộn màu giống photoshop
+  height: 325px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  h2 {
+    @include styleText($color-white-0, $fs-4, $fw-0);
+  }
+  p {
+    color: $color-white-0;
+    margin-bottom: 0;
+  }
+  .button--red {
+    margin: $mg-4 0;
+  }
+}

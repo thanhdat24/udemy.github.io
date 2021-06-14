@@ -1,0 +1,24 @@
+.viewting {
+  padding: $pd-3 + 2 0;
+  .viewting__content {
+    width: 90%;
+    margin: auto;
+    h2 {
+      @include styleText($color-black-0, $fs-5, $fw-2);
+      margin-bottom: $mg-3;
+    }
+  }
+  @include responsive("screen-2") {
+    .card {
+      .card-body {
+        padding: 0.5rem;
+        .card-title {
+          @include styleText($color-black-0, $fs-1, $fw-1);
+        }
+        .card__price {
+            padding: $pd-2 0;
+        }
+      }
+    }
+  }
+}

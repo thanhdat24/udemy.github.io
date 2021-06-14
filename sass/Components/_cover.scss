@@ -1,0 +1,37 @@
+.cover {
+  // ta phải sử dụng đừng dẫn url của css chứ không dùng của scss
+  background-image: url(../img/cover.jpg);
+  // @extend .backgroundImg;
+  @extend %backgroundImg;
+  height: 550px;
+  position: relative;
+  .cover__content {
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%);
+    max-width: 550px;
+    h1 {
+      @include styleText($color-white-0, $fs-2, $fw-2);
+    }
+    p {
+      @include styleText($color-white-0, $fs-3, $fw-0);
+    }
+    .cover__form {
+      @include styleFormSearch(
+        $color-white-0,
+        $color-white-0,
+        $color-white-0,
+        $color-black-light
+      );
+      cursor: pointer;
+    }
+  }
+
+  @include responsive("small") {
+    .cover__content {
+      max-width: 400px;
+      left: 10%;
+    }
+  }
+}
